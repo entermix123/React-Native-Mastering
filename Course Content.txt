@@ -1,0 +1,83 @@
+Course Content
+==============
+
+Section 1: Introduction and Setup
+1. What is App Development?
+2. Difference Between App and Web Development
+3. What is React Native and why it is in demand?
+4. Alternatives to React Native
+5. Difference between Expo cli and React Native cli
+6. Course Materials
+
+
+Section 2: Installation
+7. VS Code Installation
+8. First React Native App
+
+
+Section 3: Basics and core concepts
+9. Core concepts
+10. File Structure
+11. Components
+
+
+Section 4: Basics of JavaScript
+12. What is variable?
+13. Data types
+14. Operators
+15. if else if
+16. Arrow functions
+17. For each loop
+18. Map
+19. Filter
+20. Reduce
+21. Template literals
+
+
+Section 5: Diving into React Native
+22. JSX
+23. Events
+24. Hooks
+25. Props
+
+
+Section 6: Styling in React Native
+26. Types of styling
+27. External file
+28. Margin and Padding
+
+
+Section 7: Navigate an App
+29. Navigation in React Native
+30. Stack navigation
+31. Stack navigation styling
+32. Tab navigation
+33. Icon
+
+
+Section 8: Form and Mini project
+34. Form
+35. Scroll view
+36. Color generator (project)
+
+
+Section 9: Code optimization and conclusion
+37. Code with React Native 100x time faster
+38. Conclusion
+
+
+Section 10: BONUS Section - Don't Miss Out
+39. BONUS Section - Don't Miss Out
+
+
+
+
+
+
+
+
+
+
+
+
+

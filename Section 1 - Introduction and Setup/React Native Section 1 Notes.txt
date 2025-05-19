@@ -1,0 +1,41 @@
+Section 1: Introduction and Setup
+Content
+
+1. What is App Development?
+2. Difference Between App and Web Development
+3. What is React Native and why it is in demand?
+4. Alternatives to React Native
+5. Difference between Expo cli and React Native cli
+6. Course Materials
+
+
+
+
+
+1. What is App Development?
+===========================
+
+
+
+2. Difference Between App and Web Development
+=============================================
+
+
+
+3. What is React Native and why it is in demand?
+================================================
+
+
+
+4. Alternatives to React Native
+===============================
+
+
+
+5. Difference between Expo cli and React Native cli
+===================================================
+
+
+
+6. Course Materials
+===================

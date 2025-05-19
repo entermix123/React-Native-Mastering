@@ -1,0 +1,66 @@
+Section 4: Basics of JavaScript
+
+Content
+
+12. What is variable?
+13. Data types
+14. Operators
+15. if else if
+16. Arrow functions
+17. For each loop
+18. Map
+19. Filter
+20. Reduce
+21. Template literals
+
+
+
+12. What is variable?
+=====================
+
+
+
+13. Data types
+==============
+
+
+
+14. Operators
+=============
+
+
+
+15. if else if
+==============
+
+
+
+16. Arrow functions
+===================
+
+
+
+17. For each loop
+=================
+
+
+
+18. Map
+=======
+
+
+
+19. Filter
+==========
+
+
+
+20. Reduce
+==========
+
+
+
+21. Template literals
+=====================
+
+

@@ -1,0 +1,16 @@
+Section 9: Code optimization and conclusion
+
+Content
+
+37. Code with React Native 100x time faster
+38. Conclusion
+
+
+
+37. Code with React Native 100x time faster
+===========================================
+
+
+
+38. Conclusion
+==============

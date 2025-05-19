@@ -1,0 +1,24 @@
+Section 6: Styling in React Native
+
+Content
+
+26. Types of styling
+27. External file
+28. Margin and Padding
+
+
+
+26. Types of styling
+====================
+
+
+
+27. External file
+=================
+
+
+
+28. Margin and Padding
+======================
+
+
