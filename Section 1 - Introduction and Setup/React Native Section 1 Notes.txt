@@ -15,27 +15,200 @@ Content
 1. What is App Development?
 ===========================
 
+2 types of app development
+	- native
+	- cross platform
+
+native app development
+----------------------
+- designing programs build particulary for specific OS (iOS or Android)and developed in this language that is native to that platform.
+
+ross platform app development
+-----------------------------
+- designing programs that can be used in multiple platforms and are created in programming language that is platform agnostic. Agnostic software is free from any ties to a psecific OS and runs equally well across more than one platform.
+
+
+Tha app development process includes various stages such as:
+- brainstorming
+- wireframing
+- designing
+- programming
+- testing
+- deployment
+
+
+Steps of app development process
+--------------------------------
+- audiation - 
+app's concept is developed - contains market research, recognizes user needs and discusses work and solutions
+
+- wireframing - 
+blue print of the app layout and the user interface is generated during this stage. This aids in determining the operation and flow of the program.
+
+- designing - 
+Wehn the wireframes are beeing approved, the design team produces visually beautiful and user friendly interface for the app. The interface must be easy to understand and manipulate.
+
+- development -
+This is the stage in which the app is properly coded and developed. The apps features and functionalities are build by the developers using programming languages, software and tools.
+
+- testing -
+When the app is created it is put on series of tests to ensure that is functional and free of faults or problems.
+
+- deployment -
+After have been properly tested the program is uplaoded on the app store fro consumers to download and use. 
+
+App creation also includes constant maintenance and upgrades to presere app's functionality, security and competability with most recent OS and devices. Target audiance, add functionality, user experience, security and scalability are all important factors while designing an app. It is also critical to comprehand the app stores criteria and regulations to accept the app for distribution.
+
 
 
 2. Difference Between App and Web Development
 =============================================
+
+Web development is activity of creating websites. A web applications that run on web browsers. Websites can be accessed on various devices like desktops, laptops, tablets and smartphones. Websites requires an internet connection to operate. There are 2 main types of websites - static and dynamic. 
+- Static websites are made of HTML CSS and JavaScript and do not have a database. 
+- Dynamic sites are more complex and have databases. They are build using programming languages like PHP, Ruby on rails, Python and more.
+
+Tha app development process includes several stages such as:
+- planning
+- designing
+- coding
+- testing
+- deployment
+
+Web developers need to be proficient in programming languages such as HTML, CSS, JavaScript, and various frameworks such as React, Angular and Vue.
+
+
+
+Difference between App development and Web development
+------------------------------------------------------
+- Platforms -
+App development involve creating applications that run on specific platforms such as iOS or Android.
+Web development involve creating websites that can be accessed on ay device using a web browser.
+
+- Online vs. Offline -
+Apps can operate offline without internet connection.
+Websites require an internet connection to operate.
+
+- User experience -
+Apps aim to provide the users with native experience that is tailured to the specific device.
+Web development aims of creating a seamless user experience across different devices.
+
+- Programming Languages -
+App development requires different programming languages such as Java, Swift and Kotlin.
+Web development requires languages such as HTML, CSS and JavaScript.
+
+- Development Tools -
+App development requires specific development tools such as XCode (iOS)
+Web Development uses tools sucj as VSCode, Sublime or Atom.
+
+- Deployment -
+Apps are deployed true app stores such as Apple's app store or google play app store.
+Websites are deployed on web servers.
+
+In conclusion App development and Web development are two distinct development areas with unique features. The primary difference between the two is that app development involves creating applications thatrun nativly on specific platforms while web development involves creating websites that can be accessed on any device with a web browser.
+
 
 
 
 3. What is React Native and why it is in demand?
 ================================================
 
+What is React Native
+--------------------
+
+React Native is a development tool used for development of mobile applications that was created by facebook. It enables developers to build mobile applications using JavaScript and React which are popular web development technologies. React Native was released in 2015 and since then it is became one of the most popular frameworks for building mobile applications.
+
+React Native work by creating a virtual DOM (Document Object Model) to create a hirarchy of UI components taht are rendered on the screen. The virtual DOM is lightweight representation of the actual DOM which makes it faster to update and render UI components. React allows developers to write code and reuse it in multiple platforms including iOS and Android. This is because the framework uses native components wich are platform specific UI elements that are optimized for each platform. React Native produces a set of prebuild UI components that are customisable and can be used to create complex UI elements. 
+
+One of the main advantages of React Native is that allows the developers to use their existing web development skills to build mobile applications. This means that the developers do not need to learn new programming languages or tools to build mobile applications which can save a lot of time and reduce the learning curve. 
+
+React Native also have a large and active community of developers which means that developers can find answers to their questions and get help when they need it true the React Native's network. The framework has many librariesand plugins that can be used to extend the functionality and add new features to applications.
+
+In conclusion - React Native is a framework for developing mobile applications that uses JavaScript and React that is popular web development technologies htat allows developers to build mobile applications using a single code base that can be used in multiple platforms including iOS and Android.
+
+
+
+Why it is in Demand?
+--------------------
+
+React Native is in high demand of several reasons. Here are some of the main reasosn:
+
+- Platforms -
+Cross platform compatibility. Developers can create app that operates on both iOS and Android platforms using the same codebase. This make it cost effective and efficient solution for organizations and developers interested in developing apps available across mutiple platforms.
+
+- Component Based -
+This allows the developers to observe changes to the app in real time without having to compile the code. This aids in the development process by the shortening the time and effort necessar to design and test apps. 
+
+- Community Support -
+Big and active developer community that contribute to the framework's growth and enhancement. This implies that developers have a platura of resources, frameworks and tools to their disposable making it easier to design high quality programs.
+
+- High Performance -
+React Native is well known for its high performace characteristics which allows apps to load rapidly and function smoothly on other devices. It is also uses native components which provide programmes more natural appearanse feel, making the software more intuitive and user friendly.
+
+- Cost Effective -
+Since React Native allows developers to create cross platform apps using a single code base, it drasticly cuts devepment costs and time to market and making it an appieling alternatives for small startups and enterprises.
+
+- Reusable Components -
+React native enables developers to construct reuable components that can be reused trueout the project. This saves developers time and effort because they don't have to design the same component from scratch over and over again.
+
+- Easy to Learn -
+React Native is imple to understand since is build on top of React - hte famous JavaScript package. This implies that React developers can rapidly learn React Native and begin designing mobile apps.
+
+- Huge developers pool -
+Big and vast developers pool that re aware and knoledgeble about the framework, businesses and organizations and can be quickly located and recruited to work on app development projects.
+
+- Third-Party-Library -
+They provide features that are not available in React Native features. This allows developers rapidly to add extra functionality to their projects.
+
+- Scalability -
+Since React native is very scalable it can be used to create apps of any sizes - from simple apps to massive comples applications.
+
+- Open Source -
+Because React Native is an Open Source framework developers can using it for free while also contributing to its development.
+
+
 
 
 4. Alternatives to React Native
 ===============================
+
+There are several alternatives available to developers. Some of the popular alternatives of React Native include:
+
+- Flutter - 
+Open source mobile application development framework created by Google. It uses the Dart programming language and allows developers to build high performace, visually attractive mobile applications that run on both iOS and Android.
+
+- Xamarin - 
+Mobile development application framework using C# and .Net languages. It enables developers to write code ones and use it across mutiple platforms including iOS, Android and Windows.
+
+- Ionic - 
+Open Source framework to build hybrid mobile applications using web technologies such as HTML, CSS and JavaScript. Developers can bild applications that runs on both iOS and Android.
+
+- NativeScript -
+Open Source mobile application development framework that allows developers to build native mobile applications using JavaScript and TypeScript. It allows developers to write code ones and use it over multiple platforms including iOS and Android.
+
+Each of these frameworks has its own strengths and weaknesses and developers should carefully evaluate their requirements and goals before choosing a framework.
 
 
 
 5. Difference between Expo cli and React Native cli
 ===================================================
 
+Expo GO Cli is a tool chain build aroun React Native that provides a simplified and streamlined to develop React ative applications. It includes a preset of prebuild components and APIs hta we can use to build our application without the need to write any native code. Also provides a developemtn server that we can use to preview our app during development as well as tools for building and publishing our app to different app stores.
+
+
+React Native cli is the official command line interface for React Native. It provides more traditional development workflow in which we create our own project structure and write all the code ourself including any native code that our app requires. Also provides tools for building and deploying our app to appstores, but these tools requires more configuration and setup compared to Expo cli.
+
+In conclusion Expo Cli provides more simple and streamline development workflow for React Native applications while React Native Cli provides more flexibility and control over our project structure and code. The choice between the two depends on our specific needs and preferences as a developer.
+
 
 
 6. Course Materials
 ===================
+
+- Downloaded in the repository
+
+
+
+
+
+
