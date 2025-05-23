@@ -10,7 +10,129 @@ Content
 7. VS Code Installation
 =======================
 
+Download and install VSCode - https://code.visualstudio.com/
+Download and install Node.js - https://nodejs.org/en
+	- install LTS (long term support) version
+	- check if node and npm are installed properly
+		terminal --> node -v
+		terminal --> npm -v
 
 
 8. First React Native App
 =========================
+
+Open project folder in VS Code.
+
+Go to React Native website - https://reactnative.dev/
+	- click 'Get Started' button
+
+We will use Expo Go Cli and npm.
+
+Install npm expo cli
+	terminal --> npm install -g expo-cli
+
+Create new blank project named demoapp
+	terminal --> npx create-expo-app demoapp --template blank
+
+Go to the project folder
+	terminal --> cd demoapp
+
+Start the project
+	terminal --> npx expo start
+
+The following option commads will appear:
+----------------------------------------------------------------------------
+› Metro waiting on exp://192.168.1.198:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Web is waiting on http://localhost:8081
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› shift+m │ more tools
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+----------------------------------------------------------------------------
+
+Download and install Android Studio - https://developer.android.com/studio
+	- go to virtual device manager
+	- install Pixel_7_Pro
+	- start the device
+	- wait till the device fully boot
+
+Download and install Expo Orbit Emulator - https://expo.dev/orbit
+	- register with email, account and password, confirm email
+	- install Orbit Emulator
+	- open and select the device
+
+Download and install Expo Go for android or iOS -  https://expo.dev/go?sdkVersion=53&platform=android&device=false
+	- register
+	- save the .apk file on the PC
+
+Open Orbit Emulator
+	- make sure that the emulated Android mobile phone is running
+	- load the Expo Go .apk file from the PC
+
+
+Login on Expo Go on the emulated mobile and set the url: exp://192.168.1.198:8081
+
+The app demoapp should be isualized on the emulated mobile phone.
+
+
+Edit the app
+============
+
+In demoapp\App.js we can edit the index tab and visualize immediately.
+----------------------------------------
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default function App() {
+  return (
+    <View style={styles.container}>
+      <Text>Hello There</Text>
+      <StatusBar style="auto" />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+----------------------------------------
+Save changes - Ctrl + s
+
+The changes should appear on the emulated mobile phone
+
+
+Common commands:
+Start the app in VS Code
+- open the app folder in VS Code and start the app
+	terminal --> npx expo start
+
+
+
+
+
+
+
+
+
+
+
+
+
+
