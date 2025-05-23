@@ -14,10 +14,143 @@ Content
 29. Navigation in React Native
 ==============================
 
+Teoretical exploanation
+-----------------------
+
+Going from one tab to another is the nasic idea of navigation.
+
+Option 1 - Button navigation
+
+-------------------------		-------------------------		-------------------------
+|			|		|			|		|			|	
+|			|		|			|		|			|
+|			|		|			|		|			|
+|			|		|			|		|			|
+|			|		|			|		|			|
+|	Screen 1	|    ===>	|	Screen 2	|    ===>	|	Screen 3	|
+|			|		|			|		|			|
+|			|		|			|		|			|
+|	Login		|		|	Sign Up		|		|	Home		|
+|			|		|			|		|			|
+|			|		|			|		|			|
+|			|		|			|		|			|
+-------------------------		-------------------------		-------------------------
+	|											^
+	|											|
+	-----------------------------------------------------------------------------------------
+
+
+Option 2 - Drower navigation
+There is a Drower navigation menu often used for navigators in mobile applications.
+
+
+Option 3 - Navigation tabs (like bottom side of the mobile phones) 
+more on Expo Go
+
+
 
 
 30. Stack navigation
 ====================
+
+Documentation on React Navigation - https://reactnavigation.org/
+
+Open the project.
+
+Istall the navigation module
+	terminal --> npm install @react-navigation/native
+
+Install dependencies into an Expo managed project
+	terminal --> npx expo install react-native-screens react-native-safe-area-context
+
+Installing dependencies into a bare React Native project if warning araise
+	terminal --> npm install react-native-screens react-native-safe-area-context
+
+
+From here: https://reactnavigation.org/docs/hello-react-navigation
+Installing the native stack navigator library
+	terminal --> npm install @react-navigation/native-stack
+
+
+App.jsx
+---------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button } from "react-native";
+import Styles from "./style";
+import {
+    createStaticNavigation,
+    NavigationContainer,
+} from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="Home" component={HomeScreen} />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </>
+    );
+};
+
+// export
+
+export default App;
+
+---------------------------------------------------------
+
+
+
+Login.js component
+---------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, View, Button } from "react-native";
+
+// components
+const Login = (props) => {
+  return (
+    <>
+      <View>
+        <Text> Login Screen </Text>
+        <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        />
+      </View>
+    </>
+  );
+};
+
+export default Login;
+---------------------------------------------------------
+
+
+
+Signup.js component
+---------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, View, Button } from "react-native";
+
+// components
+const Signup = (props) => {
+  return (
+    <>
+      <View>
+        <Text> Signup Screen </Text>
+        <Button title="Navigate to Login" onPress={() => props.navigation.navigate("Login") }
+        />
+      </View>
+    </>
+  );
+};
+
+export default Signup;
+---------------------------------------------------------
+
 
 
 
@@ -25,13 +158,247 @@ Content
 ============================
 
 
+App.jsx
+---------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button } from "react-native";
+import Styles from "./style";
+import { createStaticNavigation, NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import Login from './screen/Login'
+import Signup from './screen/Signup'
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="Login" component={Login}
+                    options={{
+                        title: 'Login',                             /* Set tab title to Users */
+                        headerStyle: {
+                            backgroundColor: 'green',               /* set background of the header of the tab */
+                        },
+                        headerTintColor: 'black',                   /* set title color */
+                        headerTitleStyle: {
+                            fontSize: 25,                           /* set tab header font size */
+                        }
+                    }}
+                    />
+                    <Stack.Screen name="Signup" component={Signup} 
+                    options={{
+                        title: 'SignUp',                             /* Set tab title to Users */
+                        headerStyle: {
+                            backgroundColor: 'green',               /* set background of the header of the tab */
+                        },
+                        headerTintColor: 'black',                   /* set title color */
+                        headerTitleStyle: {
+                            fontSize: 25,                           /* set tab header font size */
+                        }
+                    }}
+                    />
+                </Stack.Navigator>
+            </NavigationContainer>
+        </>
+    );
+};
+
+
+// export
+export default App;
+---------------------------------------------------------
+
+
+
+Set buttons as links in the header of the navigation
+---------------------------------------------------------
+...
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Stack.Navigator>
+                    <Stack.Screen name="Login" component={Login}
+                    options={{
+                        headerTitle: () => <Button title="Left" />,	/* set button as links */
+                        headerRight: () => <Button title="Right" />,	/* set button as links */
+                        // title: 'Login',                            
+                        headerStyle: {
+                            backgroundColor: 'green',               /* set background of the header of the tab */
+                        },
+...
+---------------------------------------------------------
+
+
+
 
 32. Tab navigation
 ==================
 
+Bottom Navigation
+-----------------
+Documentation - https://reactnavigation.org/docs/bottom-tab-navigator/
+
+Install tab navigation
+	terminal --> npm install @react-navigation/bottom-tabs
+
+
+App.jsx
+---------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button } from "react-native";
+import Styles from "./style";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Login from './screen/Login'
+import Signup from './screen/Signup'
+import { NavigationContainer } from "@react-navigation/native";
+const Tab = createBottomTabNavigator();
+
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Tab.Navigator>
+                    <Tab.Screen name="Login" component={Login} />
+                    <Tab.Screen name="Signup" component={Signup} />
+                </Tab.Navigator>
+            </NavigationContainer>
+        </>
+    );
+};
+
+
+// export
+export default App;
+---------------------------------------------------------
+
+
+Top Navigation
+--------------
+
+Documentation - https://reactnavigation.org/docs/material-top-tab-navigator/
+
+Install tab navigation
+	terminal --> npm install @react-navigation/material-top-tabs
+	terminal --> npx expo install react-native-pager-view
+	terminal --> npm install react-native-pager-view
+
+
+App.jsx
+---------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button } from "react-native";
+import Styles from "./style";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";               /* set bottom navigation */
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";    /* set top navigation */
+import Login from './screen/Login'
+import Signup from './screen/Signup'
+import { NavigationContainer } from "@react-navigation/native";
+const Tab = createMaterialTopTabNavigator();
+
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Tab.Navigator>
+                    <Tab.Screen name="Login" component={Login} />
+                    <Tab.Screen name="Signup" component={Signup} />
+                </Tab.Navigator>
+            </NavigationContainer>
+        </>
+    );
+};
+
+
+// export
+export default App;
+
+---------------------------------------------------------
 
 
 33. Icon
 ========
+
+We will use MaterialCommunityIcons
+
+We need to install react native vector icons - https://www.npmjs.com/package/react-native-vector-icons
+	terminal --> npm i react-native-vector-icons
+	terminal --> npm install --save react-native-vector-icons
+
+We can find icons here - https://pictogrammers.com/library/mdi/
+
+
+
+For this example we will use bottom navigatior
+
+App.jsx
+---------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button } from "react-native";
+import Styles from "./style";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";               /* set bottom navigation */
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";    /* set top navigation */
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+import Login from './screen/Login'
+import Signup from './screen/Signup'
+import { NavigationContainer } from "@react-navigation/native";
+const Tab = createBottomTabNavigator();
+
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Tab.Navigator>
+                    <Tab.Screen name="Login" component={Login} 
+                    options={{
+                        tabBarIcon: ({
+                            color,size
+                        }) => (
+                            <MaterialCommunityIcons name='login' size={size} color="gray" 
+                            /* size nomalize the icon size, the name must be available in the site of the library */
+                            />
+                        )
+                    }}
+                    />
+                    <Tab.Screen name="Signup" component={Signup} 
+                                        options={{
+                        tabBarIcon: ({
+                            color,size
+                        }) => (
+                            <MaterialCommunityIcons name='account-plus' size={size} color="gray" 
+                            /* size nomalize the icon size,  the name must be available in the site of the library */
+                            />
+                        )
+                    }}
+                    />
+                </Tab.Navigator>
+            </NavigationContainer>
+        </>
+    );
+};
+
+
+// export
+export default App;
+---------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
