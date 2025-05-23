@@ -12,14 +12,343 @@ Content
 34. Form
 ========
 
+Modify the Login screen with input fields
+
+Login.js
+------------------------------------------------------------
+// import Libraries
+import React, { useState } from "react";
+import {Text, View, Button, TextInput, StyleSheet, TouchableOpacity } from "react-native";
+
+// components
+const Login = (props) => {
+
+  const [ userName, setUsernme] = useState("");
+
+
+  return (
+    <>
+      <View>
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                             {/* This is the button text, remove comment when use the form */}
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>             {/* This is field where written input is represented true the hook,  remove comment when use the form */}
+      </View>
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
+  input: {
+    borderColor: "red",
+    borderWidth: 3,
+    padding: 10,
+    margin: 10,
+    backgroundColor: "lightgray",
+  },
+  button: {
+    width: 150,
+    height: 50,
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 15,
+    marginLeft: 130,
+  },
+})
+
+export default Login;
+------------------------------------------------------------
+
+
 
 
 35. Scroll view
 ===============
 
 
+We add several more inout credential fields like we laready have from the last section and add ScrolView Tag section after the View section and our scroll view works properly.
+
+
+Login.js
+------------------------------------------------------------
+// import Libraries
+import React, { useState } from "react";
+import {Text, View, Button, TextInput, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+
+// components
+const Login = (props) => {
+
+  const [ userName, setUsernme] = useState("");
+
+
+  return (
+    <>
+      <View>
+        <ScrollView                       /*added ScrollView*/ 
+        >
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                            
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>             
+
+
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                            
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>             
+
+
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                            
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>             
+
+
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                            
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>             
+
+
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                            
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>             
+
+
+        <Text> Login Screen </Text>
+        {/* <Button title="Navigate to Signup" onPress={() => props.navigation.navigate("Signup") }
+        /> */}
+        <TextInput style={styles.input} placeholder="Username" onChangeText={(text) => setUsernme(text)}  /* This is the field hook gor writing text */
+        />
+        <TextInput style={styles.input} placeholder="Password" />
+        <TouchableOpacity style={styles.button}   /* This is the touch button */ >                     
+          <Text>Click Here</Text>                            
+        </TouchableOpacity>
+        <Text>Your Username is: {userName}</Text>    
+        </ScrollView>         
+      </View>
+    </>
+  );
+};
+
+const styles = StyleSheet.create({
+  input: {
+    borderColor: "red",
+    borderWidth: 3,
+    padding: 10,
+    margin: 10,
+    backgroundColor: "lightgray",
+  },
+  button: {
+    width: 150,
+    height: 50,
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 15,
+    marginLeft: 130,
+  },
+})
+
+export default Login;
+------------------------------------------------------------
+
+
 
 36. Color generator (project)
 =============================
+
+Create Picker.js in screen folder file. We can use the structure of the Signup screen and rename the main function, export and the screen text in the code. Delete the View section tags and button element. This is the base of the Picker screen:
+
+Picker.js
+------------------------------------------------------------
+import React from "react";
+import {Text, View, Button } from "react-native";
+
+const Picker = (props) => {
+  return (
+    <>
+      <View>
+
+      </View>
+    </>
+  );
+};
+
+export default Picker;
+------------------------------------------------------------
+
+
+In App.jsx import Picker component and add the Picker screen by replicating Signup or Login screen.
+
+We can choose different Icon for the screen on https://pictogrammers.com/library/mdi/	(palette)
+
+App.jsx
+------------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button } from "react-native";
+import Styles from "./style";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"; /* set bottom navigation */
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs"; /* set top navigation */
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
+import Login from "./screen/Login";
+import Signup from "./screen/Signup";
+import Picker from "./screen/Picker";
+import { NavigationContainer } from "@react-navigation/native";
+const Tab = createBottomTabNavigator();
+
+const App = () => {
+    return (
+        <>
+            <NavigationContainer>
+                <Tab.Navigator>
+                    <Tab.Screen
+                        name="Login"
+                        component={Login}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons
+                                    name="login"
+                                    size={size}
+                                    color="gray"
+                                    /* size nomalize the icon size, the name must be available in the site of the library */
+                                />
+                            ),
+                        }}
+                    />
+                    <Tab.Screen
+                        name="Signup"
+                        component={Signup}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons
+                                    name="account-plus"
+                                    size={size}
+                                    color="gray"
+                                    /* size nomalize the icon size,  the name must be available in the site of the library */
+                                />
+                            ),
+                        }}
+                    />
+
+                    <Tab.Screen
+                        name="Color-Picker"
+                        component={Picker}
+                        options={{
+                            tabBarIcon: ({ color, size }) => (
+                                <MaterialCommunityIcons
+                                    name="palette"
+                                    size={size}
+                                    color="gray"
+                                    /* size nomalize the icon size,  the name must be available in the site of the library */
+                                />
+                            ),
+                        }}
+                    />
+                </Tab.Navigator>
+            </NavigationContainer>
+        </>
+    );
+};
+
+// export
+export default App;
+------------------------------------------------------------
+
+
+
+We will develop the Picjer screen logic as follow:
+
+
+Picker.js
+------------------------------------------------------------
+import React, { useState } from "react";
+import { Text, View, Button, Alert } from "react-native";
+
+const Picker = (props) => {
+
+    const [boxColor, setboxColor] = useState("yellow");
+
+    const randomColor = () => {                             // set random picker function
+        const red = Math.floor(Math.random() * 256);
+        const green = Math.floor(Math.random() * 256);
+        const blue = Math.floor(Math.random() * 256);
+        return `rgb(${red},${green},${blue})`;
+    };
+
+    const onPickColorPress = () => {                        // set on click button alert event
+        const boxColor = randomColor();
+        setboxColor(boxColor);
+        Alert.alert("Random Color", randomColor());
+    };
+
+    return (
+        <>
+            <View>
+                <Button
+                    title="Color Picker"
+                    onPress={() => {                        // set on click function in the button element
+                        onPickColorPress();
+                    }}
+                />
+                <View>
+                    <Text
+                        style={{
+                            backgroundColor: boxColor,
+                            width: 300,
+                            height: 300,
+                            marginTop: 50,
+                            marginLeft: 60,
+                            borderRadius: 50,
+                        }}
+                    ></Text>
+                </View>
+            </View>
+        </>
+    );
+};
+
+export default Picker;
+------------------------------------------------------------
+
+
+
+
 
 
