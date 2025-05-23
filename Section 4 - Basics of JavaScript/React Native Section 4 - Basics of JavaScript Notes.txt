@@ -14,53 +14,588 @@ Content
 21. Template literals
 
 
+From the last chapter we have application as follow:
+
+Login.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, StyleSheet, View } from "react-native";
+
+// components
+const Login = () => {
+  return (
+    <>
+
+        <Text style={styles.text}> Login Form </Text>
+
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    // felx: 1,
+    color: "green",
+    // backgroundColor: "gray",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+});
+
+export default Login;
+----------------------------------------------------------------------------
+
+
+Signup.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, StyleSheet, View } from "react-native";
+
+// components
+const Signup = () => {
+  return (
+    <>
+      <Text style={styles.text}> Signup </Text>
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    // felx: 1,
+    color: "hotpink",
+    // backgroundColor: "gray",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+});
+
+export default Signup;
+----------------------------------------------------------------------------
+
+
+App.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import { Text, StyleSheet, View } from "react-native";
+import Login from "./screen/Login";
+import Signup from "./screen/Signup.js";
+
+// components
+const App = () => {
+  return (
+    <>
+        <View style={styles.text}>
+          <Text style={styles.container}> Meta Brains </Text>
+          <Login />
+          <Signup />
+        </View>
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    felx: 1,
+    color: "red",
+    backgroundColor: "pink",
+    height: 900,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  container: {
+    felx: 1,
+    color: "red",
+  },
+});
+
+export default App;
+----------------------------------------------------------------------------
+
+
+
+
 
 12. What is variable?
 =====================
+
+
+We have 3 main variable:
+------------------------
+// var; types: Strings, Numbers, Boolean, Array, Object, Null
+var a = 20;
+a = 30;
+// If we print a , 30 will be printed, a is overwrited
+var a = 40
+// If we print a , 40 will be printed, a is overwrited
+
+// let; 
+let b = 50;
+b = 60;
+// If we print b , 60 will be printed, a is overwrited
+// let b = 60;  redeclaring b will respond as error, cannot redeclare let variable
+
+// const; we can not overwrite and redeclate it, respond as error
+const c = 100
+// const is often used because mistakes like overwrite ot redeclate the same variable atomatically return error
+
+App.js
+------------------------------------------------------
+// import Libraries
+import React from "react";
+import { Text, StyleSheet, View } from "react-native";
+import Login from "./screen/Login";
+import Signup from "./screen/Signup.js";
+
+// var; types: Strings, Numbers, Boolean, Array, Object, Null
+var a = 20;
+a = 30;
+// If we print a , 30 will be printed, a is overwrited
+var a = 40
+// If we print a , 40 will be printed, a is overwrited
+
+// let; 
+let b = 50;
+b = 60;
+// If we print b , 60 will be printed, a is overwrited
+// let b = 60;  redeclaring b will respond as error, cannot redeclare let variable
+
+// const; we can not overwrite and redeclate it, respond as error
+const c = 100
+// const is often used because mistakes like overwrite ot redeclate the same variable atomatically return error
+
+
+// components
+const App = () => {
+  return (
+    <>
+        <View style={styles.text}>
+          <Text style={styles.container}> Meta Brains </Text>
+          <Login />
+          <Signup />
+          <View style={{ height: 16 }} />                 /* empty line */
+          <Text style={styles.container}> {a} </Text>    
+          <View style={{ height: 16 }} />                 /* empty line */
+          <Text style={styles.container}> {b} </Text>       
+          <View style={{ height: 16 }} />                 /* empty line */
+          <Text style={styles.container}> {c} </Text>       
+        </View>
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    felx: 1,
+    color: "red",
+    backgroundColor: "pink",
+    height: 900,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  container: {
+    felx: 1,
+    color: "red",
+  },
+});
+
+export default App;
+------------------------------------------------------
+
+
 
 
 
 13. Data types
 ==============
 
+create demoindex.js in the project
+
+demoindex.js
+------------------------------------------------------
+// data types
+
+String;
+var a = "Hello world";
+
+// How we can print the string
+// console.log(a);                 /*this will print the text on the console*/
+// result: Hellow world
+
+
+Boolean;
+let b = 40;
+let c = true;
+let x = false;
+
+// console.log(c);     
+// console.log(x);       
+// result: true, false
+
+
+// Null;
+var y = null;
+console.log(y);    
+// result: null
+
+
+// Array;
+var z = ["Joe", "Carlos", "Brandon", 20];
+console.log(z);  
+result: [ 'Joe', 'Carlos', 'Brandon', 20 ]
+
+
+// object
+let v = {
+    name: "Carlos",
+    age: 20,
+    email: "carlos@.mail.com"
+};
+console.log(v);
+result: { name: 'Carlos', age: 20, email: 'carlos@.mail.com' }
+------------------------------------------------------
+
+Run the file
+	terminal --> node demoindex.js
+
+
 
 
 14. Operators
 =============
+
+Crete file operators.js
+
+operators.js
+------------------------------------------------------
+let x = 15; 
+let y = 20;
+
+const z = x + y;
+console.log(z);
+// result: 35
+
+
+const z = x * y;
+console.log(z);
+// result: 300
+
+
+const z = x / y;
+console.log(z);
+// result: 0.75
+
+const z = (50 + 50) * x;
+console.log(z);
+// result: 1500
+
+var t = 20;
+t += 5;			 /* we can use /=, *=, -=, **=, etc. */
+console.log(t);
+//result: 25
+
+var g = 30;
+var h = 40;
+var j = 30
+var k = "30"
+console.log(g == h)
+// result: false
+console.log(g == j)
+// result: true
+console.log(g === k)        /* compare data types also */
+// result: false
+console.log(g !== h)
+// result: true
+console.log(g > j)
+// result: false
+console.log(g >= j)
+// result: true
+------------------------------------------------------
+Run the file
+	terminal --> node operators.js
+
 
 
 
 15. if else if
 ==============
 
+create statements.js file
+
+statements.js
+------------------------------------------------------
+var x = 5;
+
+if (x > 3) {
+    console.log("x is greater");
+}
+// result: x is greated
+
+
+
+if (x > 6) {
+    console.log("x is greater");
+}
+// no result
+
+
+
+if (x > 6) {
+    console.log("x is greater");
+}
+else {
+    console.log("Flase")
+}
+// result: False
+
+
+
+var student = 90;
+
+if (student >= 80 && student <= 100) {
+    console.log("A+");
+}
+else if (student >= 70 && student <= 80) {
+    console.log("B+")
+}
+else if (student >= 60 && student <= 70) {
+    console.log("C+")
+}
+else if (student >= 50 && student <= 60) {
+    console.log("D+")
+}
+else {
+    console.log("Fail")
+}
+// result: A+
+
+------------------------------------------------------
+Run the file
+	terminal --> node statements.js
+
+
+
+
 
 
 16. Arrow functions
 ===================
+
+create arrow.js file
+
+arrow.js
+------------------------------------------------------
+let x = fun(20, 60);
+
+function fun(a, b) { 
+    return a * b
+}
+console.log(x)
+// result: 1200
+
+
+
+// Arrow function
+let sum = (a, b) => {
+    return a + b;
+}
+console.log(sum(10, 20));
+// result: 30
+
+------------------------------------------------------
+Run the file
+	terminal --> node arrow.js
+
+
+
 
 
 
 17. For each loop
 =================
 
+create for_each_loop.js file
+
+for_each_loop.js
+------------------------------------------------------
+let num = [3, 8, 7, 9, 10]
+
+for (let i = 0; i < num.length; i++) {
+    console.log(num[i]);
+}
+// result:
+//3
+//8
+//7
+//9
+//10
+
+
+//ForEach		often used
+//-------
+
+num.forEach((ele) => {
+    console.log(ele * ele);
+});
+// result:
+//9
+//64
+//49
+//81
+//100
+
+
+
+// How to create array from string
+
+const name = "Carlos";
+let arr = Array.from(name);
+console.log(arr)
+// result: [ 'C', 'a', 'r', 'l', 'o', 's' ]
+
+------------------------------------------------------
+Run the file
+	terminal --> node for_each_loop.js
+
+
 
 
 18. Map
 =======
+
+create map.js file
+
+map.js
+------------------------------------------------------
+// map function create an array from another array
+
+let arr = [20, 30, 50];
+// console.log(arr);
+
+
+let b = arr.map((value) => {            // similar to forEach()
+    console.log(value)
+    return value + 1           // return is mandatory because nothing is going to be printed or saved in variable b
+});
+console.log(b)
+// result:
+//20
+//30
+//50
+//[ 21, 31, 51 ]
+------------------------------------------------------
+Run the file
+	terminal --> node map.js
+
 
 
 
 19. Filter
 ==========
 
+create filter.js file
+
+filter.js.js
+------------------------------------------------------
+// do not alter the original array but generates new one with the results
+
+let array = [20, 5, 80, 100, 200, 6, 9];
+let a = array.filter((a) => {
+    return a <= 10;
+});
+console.log(a);
+// result: [ 5, 6, 9 ] [
+//    20, 5, 80, 100,
+//   200, 6,  9
+// ]
+
+
+
+------------------------------------------------------
+Run the file
+	terminal --> node filter.js
+
+
+
+
 
 
 20. Reduce
 ==========
 
+create reduce.js file
+
+reduce.js
+------------------------------------------------------
+// reduction method is most crutial 
+
+let a = [10, 20, 4, 50]
+let b = a.reduce((int, curr) => {
+    return int, curr;
+});
+console.log(b);
+// result: 50       // prints the last element of the array
+
+
+let c = a.reduce((int, curr) => {
+    return int + curr;
+});
+console.log(c);
+// result: 84       // prints the sum of all elements
+
+
+let d = a.reduce((int, curr) => {
+    return int + curr;
+}, 5);                              // additional value to the array
+console.log(d);
+// result: 89                       // prints the sum of all elements and the additional value of 5
+
+------------------------------------------------------
+Run the file
+	terminal --> node reduce.js
+
+
 
 
 21. Template literals
 =====================
+
+create template_literals.js file
+
+template_literals.js
+------------------------------------------------------
+// template literals allow us to embed expressions with variables inside the string
+
+let a = "John";
+let b = `Hello ${a}`;
+
+console.log(b);
+// result: Hello John
+
+
+const price = 20;
+let rate = 0.3
+var total_price = `The total price is $${price * (1 + rate)}`;
+console.log(total_price);
+// result: The total price is $26
+------------------------------------------------------
+Run the file
+	terminal --> node template_literals.js
+
+
+
+
+
+
+
+
+
 
 
