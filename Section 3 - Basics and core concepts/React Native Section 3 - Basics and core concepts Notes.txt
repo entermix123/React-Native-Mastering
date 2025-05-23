@@ -11,13 +11,249 @@ Content
 
 9. Core concepts
 ================
+Explained imports and package.json file dependencies.
 
+We can find React Native components on https://reactnative.dev/docs/components-and-apis
+- explained how each main compnents work	
+	- View component
+	- Text component
+	- Image component
+	- Scroll component
+	- TextInput components
+	- etc.
+
+We can set code as comment and it will not function, but will be staying in the project. How to comment a code?
+	- Select the code part
+	- click Ctrl + /
+
+How we can design a view (tab) in React Native:
+	- import libraries
+	- import or create components  
+	- styling
+	- export
+
+Brief explanation of a tab structure.
 
 
 10. File Structure
 ==================
 
+Create Project
+--------------
+
+Download and install Android Studio - https://developer.android.com/studio
+	- go to virtual device manager
+	- install Pixel_7_Pro
+	- start the device
+	- wait till the device fully boot
+
+Download and install Expo Orbit Emulator - https://expo.dev/orbit
+	- register with email, account and password, confirm email
+	- install Orbit Emulator
+	- open and select the device
+
+Download and install Expo Go for android or iOS -  https://expo.dev/go?sdkVersion=53&platform=android&device=false
+	- register
+	- save the .apk file on the PC
+
+Open Orbit Emulator
+	- make sure that the emulated Android mobile phone is running
+	- load the Expo Go .apk file from the PC
+
+
+Create Project folder
+
+Install npm expo cli
+	terminal --> npm install -g expo-cli
+
+Create new blank project named demoapp
+	terminal --> npx create-expo-app demoapp2 --template blank
+
+Start the project
+	terminal --> npx expo start
+
+The following option commads will appear:
+----------------------------------------------------------------------------
+› Metro waiting on exp://192.168.1.198:8081
+› Scan the QR code above with Expo Go (Android) or the Camera app (iOS)
+
+› Web is waiting on http://localhost:8081
+
+› Using Expo Go
+› Press s │ switch to development build
+
+› Press a │ open Android
+› Press w │ open web
+
+› Press j │ open debugger
+› Press r │ reload app
+› Press m │ toggle menu
+› shift+m │ more tools
+› Press o │ open project code in your editor
+
+› Press ? │ show all commands
+----------------------------------------------------------------------------
+
+
+set App.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, StyleSheet, View } from "react-native";
+
+// components
+const App = () => {
+  return (
+    <>
+
+        <Text style={styles.text}> Meta Brains </Text>
+
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    felx: 1,
+    color: "red",
+    backgroundColor: "gray",
+    height: 500,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
+
+export default App;
+----------------------------------------------------------------------------
+
+
+
 
 
 11. Components
 ==============
+
+Create folder named "screen" in the app and create Login.js
+
+
+Login.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, StyleSheet, View } from "react-native";
+
+// components
+const Login = () => {
+  return (
+    <>
+
+        <Text style={styles.text}> Login Form </Text>
+
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    // felx: 1,
+    color: "green",
+    // backgroundColor: "gray",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+});
+
+export default Login;
+----------------------------------------------------------------------------
+
+
+Create Singup.js file in screen folder
+
+Signup.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import {Text, StyleSheet, View } from "react-native";
+
+// components
+const Signup = () => {
+  return (
+    <>
+      <Text style={styles.text}> Signup </Text>
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    // felx: 1,
+    color: "hotpink",
+    // backgroundColor: "gray",
+    // justifyContent: "center",
+    // alignItems: "center",
+  },
+});
+
+export default Signup;
+----------------------------------------------------------------------------
+
+
+
+
+
+Add Login and Sighup components to the App.js file:
+
+set App.js
+----------------------------------------------------------------------------
+// import Libraries
+import React from "react";
+import { Text, StyleSheet, View } from "react-native";
+import Login from "./screen/Login";
+import Signup from "./screen/Signup.js";
+
+// components
+const App = () => {
+  return (
+    <>
+        <View style={styles.text}>
+          <Text style={styles.container}> Meta Brains </Text>
+          <Login />
+          <Signup />
+        </View>
+    </>
+  );
+};
+
+//styling
+const styles = StyleSheet.create({
+  text: {
+    felx: 1,
+    color: "red",
+    backgroundColor: "pink",
+    height: 900,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  container: {
+    felx: 1,
+    color: "red",
+  },
+});
+
+export default App;
+----------------------------------------------------------------------------
+
+Now all components are in different colrs.
+
+
+
+
+
+
+
+
+
+
